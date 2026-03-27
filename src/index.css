@@ -1,13 +1,38 @@
-body {
+/* Reset + base moderne */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Police moderne */
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background: #0f172a; /* dark blue */
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+/* Scroll smooth */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Liens */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Boutons */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+/* Inputs */
+input {
+  font-family: inherit;
+  outline: none;
 }

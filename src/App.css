@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: radial-gradient(circle at top, #1e293b, #020617);
+}
+
+.card {
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 20px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Titre */
+.title {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+/* Humidité */
+.humidity {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #38bdf8;
+}
+
+/* Badge statut */
+.status {
+  margin-bottom: 20px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.status.on {
+  background: #22c55e;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.status.off {
+  background: #ef4444;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Bouton LED */
+.button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.button.on {
+  background: #ef4444;
+  color: white;
+}
+
+.button.off {
+  background: #22c55e;
+  color: white;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Animation pulse (live data) */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: scale(1.08);
   }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.humidity {
+  animation: pulse 2s infinite;
 }
